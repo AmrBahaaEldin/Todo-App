@@ -1,0 +1,36 @@
+import 'package:flutter/material.dart';
+import 'package:project4/core/constant/app_color.dart';
+
+class AddTaskSheet extends StatelessWidget {
+  const AddTaskSheet({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 400,
+  
+      decoration: BoxDecoration(
+        color: AppColor.primaryColor,
+        borderRadius: BorderRadius.only(
+          topRight: Radius.circular(12),
+          topLeft: Radius.circular(12),
+        ),
+      ),
+      child: Column(
+        children: [
+          Text("Add Task"),
+          TextFormField(
+            decoration: InputDecoration(
+              hintText: 'Add Task',
+              hintStyle: TextStyle(
+                color: Colors.grey,
+              ),
+              prefixIcon: Icon(Icons.task, color: Colors.grey,),
+            ),
+
+          ),
+        ],
+      ),
+    );
+  }
+}
